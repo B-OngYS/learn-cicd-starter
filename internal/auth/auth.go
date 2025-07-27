@@ -1,3 +1,4 @@
+// Package auth provides authentication utilities for API key validation.
 package auth
 
 import (
@@ -19,5 +20,5 @@ func GetAPIKey(headers http.Header) (string, error) {
 		return "", errors.New("malformed authorization header")
 	}
 
-	return splitAuth[0], nil
+	return splitAuth[1], nil
 }
