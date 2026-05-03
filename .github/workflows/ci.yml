@@ -25,5 +25,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Install staticcheck
+        run: go install honnef.co/go/tools/cmd/staticcheck@latest
       - name: run style check
         run: test -z $(go fmt ./...)
+      - name: run static check
+        run: staticcheck ./...
