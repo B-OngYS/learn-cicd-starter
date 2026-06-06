@@ -1,3 +1,4 @@
+// Package auth provides authentication utilities for API key validation.
 package auth
 
 import (
